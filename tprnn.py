@@ -22,7 +22,7 @@ def reshape_perm(xs):
     return xs_shf
 
 
-class RTModel(object):
+class TPRNN(object):
     def __init__(self, config):
         self.counts = 0
         self.lr = tf.placeholder(tf.float32, [] ,'learning_rate')
@@ -356,7 +356,7 @@ if __name__ == "__main__":
         
         tf_config = tf.ConfigProto(allow_soft_placement = True)
         tf_config.gpu_options.allow_growth = True
-        model = RTModel(config)
+        model = TPRNN(config)
         #saver = tf.train.Saver()
         #folder = os.path.exists(config.save_path)
         #if not folder :
